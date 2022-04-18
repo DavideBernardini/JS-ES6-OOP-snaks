@@ -111,12 +111,12 @@ class VendingMachine {
     dispenseDrink(drink){;
         let indexFound = this.#drinks.indexOf(drink);
         
-        indexFound != -1 ? this.#drinks.splice(indexFound ,1 ) : console.log("Bevanda non disponibile . ... .");
+        indexFound != -1 ? this.#drinks.splice(indexFound ,1 ) : console.log("Bevanda non disponibile..");
     };
 
     addDrink(drink){
         
-        this.#drinks.length < this.#maxCapacity ? this.#drinks.push(drink) : console.log("capacità massima raggiunta...");
+        this.#drinks.length < this.#maxCapacity ? this.#drinks.push(drink) : console.log("capacità massima raggiunta.");
     };
 
     showDrinks(){
