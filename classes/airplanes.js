@@ -119,7 +119,7 @@ class Airplane {
     // other methods
     addPassenger(passenger) {
         
-        if(this.#maxCapacity - 1 > this.#peopleOnBoard.length && !(passenger instanceof Captain)){
+        if(this.#maxCapacity - 1 > this.#peopleOnBoard.length && !(passenger instanceof Captain) && (passenger instanceof Passenger)){
             
             let found = this.#peopleOnBoard.indexOf(passenger.boardingPass);
 

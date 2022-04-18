@@ -127,6 +127,8 @@ const lecce = new Team('lecce');
 lecce.addCoach(new Coach('zeman', 70, 40))
 
 lecce.addPlayer(new Player('giacomazzi', 35, 'centrocampista', 15));
+lecce.addPlayer(new Player('rossi', 28, 'attaccante', 9));
+lecce.addPlayer(new Player('verdi', 22, 'portiere', 1));
 
 
 console.log(lecce.printInfo());
