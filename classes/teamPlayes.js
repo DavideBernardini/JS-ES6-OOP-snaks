@@ -110,7 +110,7 @@ class Coach extends Person{
     };
     // setter
     set yearsOfExperience(yearsOfExperience) {
-        !isNaN(yearsOfExperience) &&  yearsOfExperience > 0 ? this.#yearsOfExperience = yearsOfExperience : this.#yearsOfExperience = 'unknown';
+        isFinite(yearsOfExperience) &&  yearsOfExperience > 0 ? this.#yearsOfExperience = yearsOfExperience : this.#yearsOfExperience = 'unknown';
     };
 
     // getters

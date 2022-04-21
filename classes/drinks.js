@@ -15,7 +15,7 @@ class Drink {
     set name(name) { this.#name = name.charAt(0).toUpperCase() +  name.slice(1) };
     set origin(origin) { this.#origin = origin.charAt(0).toUpperCase() +  origin.slice(1) };
     set price(price) { 
-        !isNaN(price) && price > 0 ? this.#price = Number(price).toFixed(2) : this.#price = null;
+        isFinite(price) && price > 0 ? this.#price = Number(price).toFixed(2) : this.#price = null;
     };
     set quantity(quantity) { 
         Number.isInteger(Number(quantity)) && quantity > 0 ? this.#quantity = Number(quantity) : this.#quantity = null; 

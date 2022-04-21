@@ -45,7 +45,7 @@ class Student extends Person {
         this.matricola = matricola;
     };
     set matricola(matricola) {
-        if (!isNaN(matricola))
+        if (isFinite(matricola))
             this.#matricola = matricola
     };
     get matricola() {

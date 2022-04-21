@@ -28,7 +28,7 @@ class DocumentWithPriority extends Document {
         this.priority = priority;
     };
     set priority(priority) {
-        this.#priority = !isNaN(priority) && priority >= -1 ? priority : 0;
+        this.#priority = isFinite(priority) && priority >= -1 ? priority : 0;
     }
     get priority() {return this.#priority};
 

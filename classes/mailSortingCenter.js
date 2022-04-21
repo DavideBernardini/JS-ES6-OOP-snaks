@@ -19,11 +19,11 @@ class Mail {
         this.#reciverAddress = typeof reciverAddress == 'string' ? reciverAddress : null;
     };
     #codeGenerator() {
-        let code = ""
-        let elements = "ABCDEFGHILMNOPQRSTUVZ0123456789"
+        let code = "";
+        let elements = "ABCDEFGHILMNOPQRSTUVZ0123456789";
 
         for(let i = 0 ; i < 10 ; i++)
-            code += elements[Math.floor(Math.random() * (elements.length + 1))]
+            code += elements[Math.floor(Math.random() * (elements.length + 1))];
         
         return code;
     };
@@ -45,7 +45,7 @@ class PrioritaryMail extends Mail {
         this.priority = priority;
     }
     set priority(priority) {
-        this.#priority = !isNaN(priority) && priority > 0 ? priority : 1;
+        this.#priority = isFinite(priority) && priority > 0 ? priority : 1;
     };
     get priority() {
         return this.backToSender ? 0 : this.#priority;
